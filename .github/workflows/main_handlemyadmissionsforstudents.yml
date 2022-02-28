@@ -58,7 +58,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'handlemyadmissionsforstudents'
+          app-name: ${{env.AZURE_WEBAPP_NAME}}
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F5434DD3C0FA4A00BAC6D4ECC55612AD }}
           package: .
